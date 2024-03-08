@@ -1,7 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:newsapp/models/articles_model.dart';
-import 'package:newsapp/screens/article_content_screen.dart';
 import 'package:newsapp/widgets/new_listview.dart';
 import '../dio/news_dio.dart';
 

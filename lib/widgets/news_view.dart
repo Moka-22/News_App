@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:newsapp/models/articles_model.dart';
 
@@ -41,13 +42,47 @@ class NewsView extends StatelessWidget {
         const SizedBox(
           height: 8,
         ),
-        Text(
+         Text(
           articleModel.description ?? '',
           maxLines: 2,
           style: TextStyle(
             color: Colors.grey,
             fontSize: 14,
           ),
+        ),
+        const SizedBox(
+          height: 8,
+        ),
+        Row(
+          children: [
+            const Icon(
+              Icons.source,
+              size: 18,
+            ),
+            const SizedBox(
+              width: 5,
+            ),
+            Text(
+              articleModel.source.name,
+              style: TextStyle(fontSize: 12),
+            ),
+            const SizedBox(
+              width: 20,
+            ),
+            const Icon(
+              Icons.person,
+              size: 18,
+            ),
+            const SizedBox(
+              width: 10,
+            ),
+            Expanded(
+              child: Text(
+                articleModel.author ?? 'No author',
+                style: const TextStyle(fontSize: 12),
+              ),
+            ),
+          ],
         ),
       ],
     );
